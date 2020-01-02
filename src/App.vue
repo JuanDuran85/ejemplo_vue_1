@@ -10,12 +10,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
+            <router-link class="nav-link" :to="'/'">Home <span class="sr-only">(current)</span></router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <router-link class="nav-link" :to="'/contactos'">Contactos</router-link>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,18 +43,21 @@
         </form>
       </div>
     </nav>
-    <post-ejemplo></post-ejemplo>
+    <router-view></router-view>
   </div>
 </template>
-
 <script>
 //import HelloWorld from './components/HelloWorld.vue';
 import PostEjemplo from "./components/Post.vue";
+import Contactos from "./components/Contactos.vue";
 
 export default {
   name: "app",
   components: {
-    PostEjemplo
+    // eslint-disable-next-line vue/no-unused-components
+    PostEjemplo,
+    // eslint-disable-next-line vue/no-unused-components
+    Contactos
   }
 };
 </script>

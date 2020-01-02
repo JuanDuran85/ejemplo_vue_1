@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import Posts from './components/Post.vue';
+import Contactos from './components/Contactos.vue';
 //importamos la libreria del modulo de node
 import VueRouter from 'vue-router';
 
@@ -11,7 +12,11 @@ const routes = [
   {
     path: '/',
     component: Posts
-  }
+  },
+  {
+    path: '/contactos',
+    component: Contactos
+  },
 ];
 
 //instanciamos el nuevo rauter
